@@ -9,6 +9,7 @@ on:
 
 jobs:
     firstjob:
+        runs-on: ubuntu-24.04
         steps:
             - name: firststep
               run: echo "testing"
