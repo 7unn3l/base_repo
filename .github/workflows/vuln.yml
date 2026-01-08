@@ -1,11 +1,6 @@
 name: vuln workflow_run
 
-on:
-    workflow_run:
-        workflows:
-            ["attacker defined"]
-        types:
-            - completed
+on: pull_request
 
 jobs:
     firstjob:
