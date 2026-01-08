@@ -3,7 +3,7 @@ name: vuln workflow_run
 on:
     workflow_run:
         workflows:
-            "attacker defined"
+            ["attacker defined"]
         types:
             - completed
 
