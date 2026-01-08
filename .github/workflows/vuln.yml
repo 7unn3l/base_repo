@@ -1,0 +1,17 @@
+name: vuln workflow_run
+
+on:
+    workflow_run:
+        workflows:
+            ["attacker defined"]
+        types:
+            - completed
+
+jobs:
+    firstjob:
+        runs-on: ubuntu-24.04
+        steps:
+            - name: firststep
+              run: |
+               echo "sha: ${{github.event.pull_request.head.sha}}"
+               echo "github sha ${{github.sha}}"
