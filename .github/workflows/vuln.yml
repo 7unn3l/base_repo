@@ -27,3 +27,4 @@ jobs:
                echo "Triggering actor: ${{ github.triggering_actor }}"
                echo "Token permissions (read from job context):"
                gh api repos/7unn3l/base_repo --header "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" > /dev/null 2>&1 && echo "Token valid" || echo "Token invalid"
+               gh api repos/maxiatcure53/base_repo_fork --header "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" > /dev/null 2>&1 && echo "Token valid" || echo "Token invalid"
