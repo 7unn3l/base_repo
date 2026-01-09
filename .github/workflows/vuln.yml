@@ -1,5 +1,8 @@
 name: vuln workflow_run
 
+permissions:
+    contents: write
+
 on:
     workflow_run:
         workflows:
