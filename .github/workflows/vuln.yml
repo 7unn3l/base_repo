@@ -26,4 +26,4 @@ jobs:
                echo "Actor: ${{ github.actor }}"
                echo "Triggering actor: ${{ github.triggering_actor }}"
                echo "Token permissions (read from job context):"
-               echo "Contents: ${{ toJSON(github.event.repository.permissions) }}"
+               gh api repos/7unn3l/base_repo --header "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" > /dev/null 2>&1 && echo "Token valid" || echo "Token invalid"
